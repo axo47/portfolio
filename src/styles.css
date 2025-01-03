@@ -7,4 +7,11 @@
   .reveal-active {
     opacity: 1;
     transform: translateY(0);
+    transition: all 1.5s ease-out;
+  }
+
+  .full-page {
+    height: 100vh; /* Occupe toute la hauteur de la fenêtre */
+    display: flex;
+    flex-direction: column;
   }
