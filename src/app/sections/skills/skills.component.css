@@ -1,0 +1,18 @@
+.skills {
+    background: linear-gradient(to bottom, #498C8A, #47E5BC);
+    color: white; /* Couleur du texte */
+    width: 100vw; /* Prend toute la largeur de la fenêtre */
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    margin: 0; /* Supprime les marges */
+    padding: 0; /* Supprime les espaces internes */
+    display: flex; /* Active le mode flexbox */
+    flex-direction: column;
+    justify-content: center; /* Centre verticalement */
+    align-items: center; /* Centre horizontalement */
+    text-align: center; /* Centre le texte */
+    box-sizing: border-box; /* Inclut les bordures et paddings dans la largeur/hauteur */
+  }
+
+
+
+

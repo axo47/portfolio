@@ -1,5 +1,31 @@
-<app-hero></app-hero>
-<app-about></app-about>
-<app-skills></app-skills>
-<app-projects></app-projects>
-<app-contact></app-contact>
+<div>
+    <!-- Le scrollpy -->
+    <div class="side-nav">
+        <ul>
+            <li 
+              [class.active]="activeSection === 'hero'" 
+              (click)="scrollToSection('hero')">Hero</li>
+            <li 
+              [class.active]="activeSection === 'about'" 
+              (click)="scrollToSection('about')">About</li>
+            <li 
+              [class.active]="activeSection === 'skills'" 
+              (click)="scrollToSection('skills')">Skills</li>
+            <li 
+              [class.active]="activeSection === 'projects'" 
+              (click)="scrollToSection('projects')">Projects</li>
+            <li 
+              [class.active]="activeSection === 'contact'" 
+              (click)="scrollToSection('contact')">Contact</li>
+        </ul>
+    </div>
+
+    <!-- Le content que j'ai -->
+    <div class="content">
+        <app-hero #sectionRef id="hero"></app-hero>
+        <app-about  #sectionRef id="about"></app-about>
+        <app-skills #sectionRef id="skills"></app-skills>
+        <app-projects #sectionRef id="projects"></app-projects>
+        <app-contact #sectionRef id="contact"></app-contact>
+    </div>
+</div>

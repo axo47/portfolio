@@ -1,3 +1,12 @@
+html, body {
+  margin: 0; /* Supprime les marges par défaut */
+  padding: 0; /* Supprime les espaces internes par défaut */
+  width: 100%; /* Assure que le contenu couvre 100% de la largeur */
+  height: 100%; /* Assure que le contenu couvre 100% de la hauteur */
+  box-sizing: border-box; /* Inclut les bordures et paddings dans la largeur/hauteur */
+}
+/* 
+
 .reveal-hidden {
     opacity: 0;
     transform: translateY(20px);
@@ -8,7 +17,7 @@
     opacity: 1;
     transform: translateY(0);
     transition: all 1.5s ease-out;
-  }
+  } */
 
   .full-page {
     height: 100vh; /* Occupe toute la hauteur de la fenêtre */
