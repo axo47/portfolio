@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {RevealDirective} from '../../reveal/reveal.directive'
 
+
 @Component({
   selector: 'app-skills',
   standalone: true,

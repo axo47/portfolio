@@ -1,31 +1,66 @@
 <div>
-    <!-- Le scrollpy -->
-    <div class="side-nav">
-        <ul>
-            <li 
-              [class.active]="activeSection === 'hero'" 
-              (click)="scrollToSection('hero')">Hero</li>
-            <li 
-              [class.active]="activeSection === 'about'" 
-              (click)="scrollToSection('about')">About</li>
-            <li 
-              [class.active]="activeSection === 'skills'" 
-              (click)="scrollToSection('skills')">Skills</li>
-            <li 
-              [class.active]="activeSection === 'projects'" 
-              (click)="scrollToSection('projects')">Projects</li>
-            <li 
-              [class.active]="activeSection === 'contact'" 
-              (click)="scrollToSection('contact')">Contact</li>
-        </ul>
-    </div>
+  <div class="language-switcher">
+    <button (click)="switchLanguage('fr')">Français</button>
+    <button (click)="switchLanguage('en')">English</button>
+  </div>
+  
+  <!-- scroll py -->
+  <div class="side-nav">
+    <ul>
+      <li 
+        [class.active]="activeSection === 'hero'" 
+        (click)="scrollToSection('hero')">
+        {{ language === 'fr' ? 'Bienvenue' : 'Welcome' }}
+      </li>
+      <li 
+        [class.active]="activeSection === 'about'" 
+        (click)="scrollToSection('about')">
+        {{ language === 'fr' ? 'À propos' : 'About' }}
+      </li>
+      <li 
+        [class.active]="activeSection === 'skills'" 
+        (click)="scrollToSection('skills')">
+        {{ language === 'fr' ? 'Compétences' : 'Skills' }}
+      </li>
+      <li 
+        [class.active]="activeSection === 'projects'" 
+        (click)="scrollToSection('projects')">
+        {{ language === 'fr' ? 'Projets' : 'Projects' }}
+      </li>
+      <li 
+        [class.active]="activeSection === 'contact'" 
+        (click)="scrollToSection('contact')">
+        {{ language === 'fr' ? 'Contact' : 'Contact' }}
+      </li>
+    </ul>
+  </div>
 
-    <!-- Le content que j'ai -->
+    <!-- Le content que j'ai
     <div class="content">
         <app-hero #sectionRef id="hero"></app-hero>
         <app-about  #sectionRef id="about"></app-about>
         <app-skills #sectionRef id="skills"></app-skills>
         <app-projects #sectionRef id="projects"></app-projects>
         <app-contact #sectionRef id="contact"></app-contact>
+    </div> -->
+
+
+    <div>
+      <ng-container *ngIf="language === 'fr'">
+        <app-hero></app-hero>
+        <app-about></app-about>
+        <app-skills></app-skills>
+        <app-projects></app-projects>
+        <app-contact></app-contact>
+      </ng-container> 
+    
+       <ng-container *ngIf="language === 'en'">
+        <app-hero-en></app-hero-en>
+        <app-about-en></app-about-en>
+        <app-skills-en></app-skills-en>
+        <app-projects-en></app-projects-en>
+        <app-contact-en></app-contact-en>
+      </ng-container>
     </div>
+
 </div>

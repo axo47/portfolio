@@ -3,13 +3,12 @@ import {RevealDirective} from '../../reveal/reveal.directive'
 
 
 @Component({
-  selector: 'app-projects',
+  selector: 'app-skills-en',
   standalone: true,
   imports: [RevealDirective],
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.css'
+  templateUrl: './skills-en.component.html',
+  styleUrl: './skills-en.component.css'
 })
-export class ProjectsComponent {
+export class SkillsComponentEn {
+
 }
-
-

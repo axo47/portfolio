@@ -39,3 +39,26 @@
     padding: 20px;
     border: 1px solid #eee;
   }
+
+  .language-switcher {
+    position: fixed; /* Position fixe pour rester en haut */
+    top: 20px; /* Distance depuis le haut */
+    right: 20px; /* Distance depuis la droite */
+    z-index: 1000; /* Priorité pour qu'il soit au-dessus d'autres éléments */
+    display: flex; /* Affichage en ligne des boutons */
+    gap: 10px; /* Espacement entre les boutons */
+  }
+  
+  .language-switcher button {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .language-switcher button:hover {
+    background-color: #ff5722;
+    color: white;
+  }

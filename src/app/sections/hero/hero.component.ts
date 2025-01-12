@@ -92,6 +92,7 @@ export class HeroComponent implements OnInit {
     const welcomeElement = document.getElementById('welcome');
     if (!welcomeElement) return;
 
+
     const updateGreeting = () => {
       if (this.isAnimating) return;
       this.isAnimating = true;
