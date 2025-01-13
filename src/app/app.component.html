@@ -35,32 +35,23 @@
     </ul>
   </div>
 
-    <!-- Le content que j'ai
-    <div class="content">
-        <app-hero #sectionRef id="hero"></app-hero>
-        <app-about  #sectionRef id="about"></app-about>
-        <app-skills #sectionRef id="skills"></app-skills>
-        <app-projects #sectionRef id="projects"></app-projects>
-        <app-contact #sectionRef id="contact"></app-contact>
-    </div> -->
-
-
-    <div>
-      <ng-container *ngIf="language === 'fr'">
-        <app-hero></app-hero>
-        <app-about></app-about>
-        <app-skills></app-skills>
-        <app-projects></app-projects>
-        <app-contact></app-contact>
-      </ng-container> 
-    
-       <ng-container *ngIf="language === 'en'">
-        <app-hero-en></app-hero-en>
-        <app-about-en></app-about-en>
-        <app-skills-en></app-skills-en>
-        <app-projects-en></app-projects-en>
-        <app-contact-en></app-contact-en>
-      </ng-container>
-    </div>
-
+  <div>
+    <!-- Langue française -->
+    <ng-container *ngIf="language === 'fr'">
+      <app-hero #sectionRef id="hero"></app-hero>
+      <app-about #sectionRef id="about"></app-about>
+      <app-skills #sectionRef id="skills"></app-skills>
+      <app-projects #sectionRef id="projects"></app-projects>
+      <app-contact #sectionRef id="contact"></app-contact>
+    </ng-container> 
+  
+    <!-- Langue anglaise -->
+    <ng-container *ngIf="language === 'en'">
+      <app-hero-en #sectionRef id="hero"></app-hero-en>
+      <app-about-en #sectionRef id="about"></app-about-en>
+      <app-skills-en #sectionRef id="skills"></app-skills-en>
+      <app-projects-en #sectionRef id="projects"></app-projects-en>
+      <app-contact-en #sectionRef id="contact"></app-contact-en>
+    </ng-container>
+  </div>
 </div>
