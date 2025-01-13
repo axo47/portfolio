@@ -25,8 +25,6 @@ import { ContactComponentEn } from './sections/contact-en/contact-en.component';
 
 import { CommonModule } from '@angular/common'; // Import CommonModule
 
-
-
 import { isPlatformBrowser } from '@angular/common';
 
 @Component({
