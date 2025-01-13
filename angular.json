@@ -13,24 +13,18 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            // Dossier où sera générée l'appli
-            "outputPath": "dist/portfolio",
+            "outputPath": "docs",
             
-            // Fichier HTML principal
             "index": "src/index.html",
             
-            // Fichier TypeScript principal (point d'entrée)
             "browser": "src/main.ts",
             
-            // Polyfills requis (Zone.js, etc.)
             "polyfills": [
               "zone.js"
             ],
             
-            // Fichier de config TS
             "tsConfig": "tsconfig.app.json",
             
-            // Assets à copier tels quels (images, etc.)
             "assets": [
               {
                 "glob": "**/*",
@@ -43,12 +37,10 @@
               }
             ],
             
-            // Fichiers CSS globaux
             "styles": [
               "src/styles.css"
             ],
             
-            // Fichiers JS supplémentaires (s’il y en a)
             "scripts": []
           },
           "configurations": {
@@ -65,7 +57,6 @@
                   "maximumError": "8kB"
                 }
               ],
-              // Active le "outputHashing" pour le cache-busting
               "outputHashing": "all"
             },
             "development": {
