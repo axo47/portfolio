@@ -1,8 +1,4 @@
-
-
-
-
- .skills {
+.skills {
   background: linear-gradient(to bottom, #498C8A, #47E5BC);
   color: white;
   width: 100vw;
@@ -44,7 +40,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: left; 
   width: 500px; 
-  height: 250px;
+  height: 220px;
 }
 
 .skills-card:hover {
@@ -66,4 +62,26 @@
 
 .skills-card li strong {
   color: #00ffd5;
+}
+
+/* Media queries pour petits écrans */
+@media (max-width: 768px) {
+  .skills h2 {
+    font-size: 1.8rem; /* Réduit encore un peu la taille du titre */
+    margin-bottom: 1rem;
+  }
+
+  .skills-container {
+    gap: 1rem; /* Réduit encore l'espacement entre les cartes */
+  }
+
+  .skills-card {
+    width: 95%; /* Les boîtes occupent presque toute la largeur */
+    height: 275px;
+    padding: 1rem; /* Moins de padding sur mobile */
+  }
+
+  .skills-card li {
+    font-size: 0.9rem; /* Réduit légèrement la taille du texte */
+  }
 }
