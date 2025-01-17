@@ -26,9 +26,29 @@
     line-height: 1.8; 
     margin-bottom: 1.2rem; 
     max-width: 800px; 
-    padding-left: 2rem; 
+    
   }
   
 .about p:last-child {
     margin-bottom: 0; 
+  }
+
+  @media (max-width: 768px) {
+    .about {
+      padding: 1.5rem; /* Réduit le padding global */
+    }
+    
+    .about h2 {
+      font-size: 2rem; /* Réduit la taille du titre */
+      padding-left: 1rem; /* Réduit le padding gauche */
+      margin-bottom: 1rem; /* Réduit l'espacement sous le titre */
+    }
+  
+    .about p {
+      font-size: 1rem; /* Réduit la taille du texte */
+      line-height: 1.5; /* Réduit l'espacement entre les lignes */
+      max-width: 90%; /* Limite la largeur pour un affichage plus compact */
+      padding-left: 1rem; /* Réduit le padding gauche */
+      margin-bottom: 1rem; /* Réduit l'espacement entre les paragraphes */
+    }
   }

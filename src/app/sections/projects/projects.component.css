@@ -1,37 +1,45 @@
+/* Style Global */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+html, body {
+  max-width: 100%;
+}
+
+/* Section Projects */
 .projects {
   background: linear-gradient(to bottom, #47E5BC, #92DCE5);
   color: white;
-  width: 100%; /* Ajuste à la largeur de l'écran */
-  height: auto; /* Permet d'ajuster automatiquement à la hauteur du contenu */
-  margin: 0;
-  padding: 2rem 1rem; /* Réduit le padding pour mieux s'adapter */
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
   box-sizing: border-box;
-  overflow: hidden; /* Empêche tout débordement */
 }
 
 .projects h2 {
-  font-size: 2rem; /* Ajuste la taille du titre */
+  font-size: 2rem;
   margin-bottom: 1.5rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-}
-
-/* Ajout de marges entre les sections */
-.projects + .skills,
-.projects + .contact {
-  margin-top: 2rem; /* Ajoute de l'espace entre les sections */
 }
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Colonnes flexibles */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
-  margin: 0 auto;
-  max-width: 100%;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
 }
 
 .project-card {
@@ -40,80 +48,75 @@
   padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
-  max-width: 300px; /* Limite la largeur */
-}
-
-.project-card ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.project-card ul li {
-  margin: 0.5rem 0;
-  text-align: left;
+  max-width: 300px;
+  overflow: hidden;
 }
 
 .project-card img {
   margin-bottom: 1rem;
-  width: 100%; /* Adapte l'image à la carte */
-  height: auto;
-  max-width: 150px;
-}
-
-.project-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: #FF8C61;
+  width: 100%;
+  height: 175px;
+  max-width: 250px; 
 }
 
 .project-card p {
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.project-card ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.project-card ul li {
   font-size: 0.9rem;
   color: white;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* Media queries pour mobile */
+/* Affichage Mobile : Seuls le titre et l'image sont visibles */
 @media (max-width: 768px) {
-  .projects {
-    padding: 1rem; /* Réduit le padding */
-  }
-
-  .projects h2 {
-    font-size: 1.8rem; /* Réduit la taille du titre */
-    margin-bottom: 1rem;
-  }
-
   .projects-container {
     grid-template-columns: 1fr; /* Une seule colonne */
     gap: 1rem;
   }
 
   .project-card {
-    padding: 1rem; /* Réduit le padding interne */
-    max-width: 90%; /* Ajuste les cartes à la largeur disponible */
+    padding: 1rem;
+    max-width: 100%; /* La carte occupe toute la largeur */
+    text-align: center;
   }
 
   .project-card img {
-    max-width: 1000px; /* Réduit la taille des images */
-  }
-
-  .project-card h3 {
-    font-size: 1rem;
+    max-width: 120px; /* Réduction de la taille des images */
   }
 
   .project-card p {
-    font-size: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold; /* Met en valeur le titre */
   }
+
+  .project-card ul {
+    display: none; /* Cache la description */
+  }
+
+
+  .project-card img {
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 100px;
+    max-width: 100px; 
+  }
+
+
 }
